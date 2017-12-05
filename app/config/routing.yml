@@ -1,0 +1,15 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+#login_check:
+#    path: /login
+
+#azine_email_bundle:
+#    resource: "@AzineEmailBundle/Resources/config/routing.yml"
+
+#my own configs
+
+#users:
+#    resource: 'AppBundle/Controller/User/OrganisationsController'
+#    type: rest
