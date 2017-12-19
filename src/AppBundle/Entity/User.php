@@ -52,12 +52,12 @@ class User implements UserInterface
      */
     private $plainPassword;
 
-    /**
-     *
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Organisations")
-     *
-     */
-    private $organisation;
+//    /**
+//     *
+//     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Organisations")
+//     *
+//     */
+//    private $organisation;
 
    public function  __construct($roles = ["ROLE_USER"]){
         $this->roles = $roles;

@@ -58,7 +58,7 @@ class Article
      *
      * @param string $title
      *
-     * @return Article
+     * @return Accounts
      */
     public function setTitle($title)
     {
@@ -82,7 +82,7 @@ class Article
      *
      * @param string $content
      *
-     * @return Article
+     * @return Accounts
      */
     public function setContent($content)
     {
@@ -106,7 +106,7 @@ class Article
      *
      * @param \AppBundle\Entity\Category $category
      *
-     * @return Article
+     * @return Accounts
      */
     public function setCategory(\AppBundle\Entity\Category $category = null)
     {

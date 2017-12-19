@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../application/.idea/application.iml" filepath="$PROJECT_DIR$/../application/.idea/application.iml" />
       <module fileurl="file://$PROJECT_DIR$/../os/lzh_application/.idea/lzh_application.iml" filepath="$PROJECT_DIR$/../os/lzh_application/.idea/lzh_application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../my_test_symfony_project/.idea/my_test_symfony_project.iml" filepath="$PROJECT_DIR$/../my_test_symfony_project/.idea/my_test_symfony_project.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/symfony.iml" filepath="$PROJECT_DIR$/.idea/symfony.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test_01Symfony/.idea/test_01Symfony.iml" filepath="$PROJECT_DIR$/../test_01Symfony/.idea/test_01Symfony.iml" />
     </modules>
   </component>
 </project>

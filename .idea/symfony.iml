@@ -19,5 +19,9 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="lzh_application" />
+    <orderEntry type="module" module-name="application" />
+    <orderEntry type="module" module-name="my_test_symfony_project" />
+    <orderEntry type="module" module-name="test_01Symfony" />
+    <orderEntry type="module" module-name="test_01Symfony" />
   </component>
 </module>

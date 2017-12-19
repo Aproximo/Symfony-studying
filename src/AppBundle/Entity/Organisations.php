@@ -7,6 +7,8 @@
  */
 
 namespace AppBundle\Entity;
+use Doctrine\ORM\Mapping\JoinTable;
+use Doctrine\ORM\Mapping\JoinColumn;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -18,12 +20,19 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Organisations
 {
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private $idd;
 
     /**
      * @ORM\Column(type="string")
@@ -36,7 +45,7 @@ class Organisations
     private $CompanyStatus;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $EDRPOU;
 
@@ -59,7 +68,6 @@ class Organisations
      * @ORM\Column(type="string")
      */
     private $WebPage;
-
 
 
 
@@ -98,149 +106,6 @@ class Organisations
         return $this->CompanyName;
     }
 
-    /**
-     * Set companyStatus
-     *
-     * @param string $companyStatus
-     *
-     * @return Organisations
-     */
-//    public function setCompanyStatus($companyStatus)
-//    {
-//        $this->CompanyStatus = $companyStatus;
-//
-//        return $this;
-//    }
-//
-//    /**
-//     * Get companyStatus
-//     *
-//     * @return string
-//     */
-//    public function getCompanyStatus()
-//    {
-//        return $this->CompanyStatus;
-//    }
-//
-//    /**
-//     * Set eDRPOU
-//     *
-//     * @param integer $eDRPOU
-//     *
-//     * @return Organisations
-//     */
-//    public function setEDRPOU($EDRPOU)
-//    {
-//        $this->EDRPOU = $EDRPOU;
-//
-//        return $this;
-//    }
-//
-//    /**
-//     * Get eDRPOU
-//     *
-//     * @return integer
-//     */
-//    public function getEDRPOU()
-//    {
-//        return $this->EDRPOU;
-//    }
-//
-//    /**
-//     * Set email
-//     *
-//     * @param string $email
-//     *
-//     * @return Organisations
-//     */
-//    public function setEmail($email)
-//    {
-//        $this->email = $email;
-//
-//        return $this;
-//    }
-//
-//    /**
-//     * Get email
-//     *
-//     * @return string
-//     */
-//    public function getEmail()
-//    {
-//        return $this->email;
-//    }
-//
-//    /**
-//     * Set phone
-//     *
-//     * @param string $phone
-//     *
-//     * @return Organisations
-//     */
-//    public function setPhone($phone)
-//    {
-//        $this->phone = $phone;
-//
-//        return $this;
-//    }
-//
-//    /**
-//     * Get phone
-//     *
-//     * @return string
-//     */
-//    public function getPhone()
-//    {
-//        return $this->phone;
-//    }
-//
-//    /**
-//     * Set activityId
-//     *
-//     * @param integer $activityId
-//     *
-//     * @return Organisations
-//     */
-//    public function setActivityId($activityId)
-//    {
-//        $this->activityId = $activityId;
-//
-//        return $this;
-//    }
-//
-//    /**
-//     * Get activityId
-//     *
-//     * @return integer
-//     */
-//    public function getActivityId()
-//    {
-//        return $this->activityId;
-//    }
-//
-//    /**
-//     * Set webPage
-//     *
-//     * @param string $webPage
-//     *
-//     * @return Organisations
-//     */
-//    public function setWebPage($webPage)
-//    {
-//        $this->WebPage = $webPage;
-//
-//        return $this;
-//    }
-//
-//    /**
-//     * Get webPage
-//     *
-//     * @return string
-//     */
-//    public function getWebPage()
-//    {
-//        return $this->WebPage;
-//    }
 
 
     /**
@@ -386,4 +251,5 @@ class Organisations
     {
         return $this->WebPage;
     }
+
 }
