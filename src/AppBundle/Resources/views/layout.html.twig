@@ -40,6 +40,10 @@
                 <a class="nav-link" href="{{ path('homepage') }}">Home </a>
             </li>
 
+            {#<li class="nav-item {% if app.request.attributes.get('_route') starts with 'api' %} active {% endif %}">#}
+                {#<a class="nav-link" href="{{ path('') }}">Api </a>#}
+            {#</li>#}
+
             {#<li class="nav-item {% if app.request.attributes.get('_route') starts with 'article' %} active {% endif %}">#}
                 {#<a class="nav-link" href="{{ path('article') }}">Articles</a>#}
             {#</li>#}

@@ -6,7 +6,7 @@
  * Time: 14:56
  */
 
-namespace AppBundle\Controller\User;
+namespace AppBundle\Controller\web\User;
 
 use AppBundle\Entity\Organisations;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

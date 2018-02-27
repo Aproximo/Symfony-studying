@@ -5,6 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
+use JMS\Serializer\Annotation as JMS;
 
 
 /**
@@ -12,6 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
+ * @JMS\ExclusionPolicy("none")
  */
 class User implements UserInterface
 {
@@ -20,6 +22,7 @@ class User implements UserInterface
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     *
      */
     private $id;
 
@@ -27,6 +30,7 @@ class User implements UserInterface
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, unique=true)
+     *
      */
     private $email;
 
@@ -35,6 +39,8 @@ class User implements UserInterface
      * @var string
      *
      * @ORM\Column(name="roles", type="json_array")
+     *
+     * @JMS\Expose
      */
     private $roles;
 
@@ -43,21 +49,23 @@ class User implements UserInterface
      * the password, but this works well with bcrypt.
      *
      * @ORM\Column(type="string", length=64)
+     * @JMS\Exclude
      */
     private $password;
 
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max=4096)
+     * @JMS\Exclude
      */
     private $plainPassword;
 
-//    /**
-//     *
-//     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Organisations")
-//     *
-//     */
-//    private $organisation;
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Organisations")
+     *
+     */
+    private $organisation;
 
    public function  __construct($roles = ["ROLE_USER"]){
         $this->roles = $roles;

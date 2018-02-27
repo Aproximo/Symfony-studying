@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Controller\User;
+namespace AppBundle\Controller\web\User;
 
 use AppBundle\AppBundle;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

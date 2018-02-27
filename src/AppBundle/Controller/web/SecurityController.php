@@ -6,7 +6,7 @@
  * Time: 17:26
  */
 
-namespace AppBundle\Controller\Admin;
+namespace AppBundle\Controller\web;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -21,7 +21,7 @@ class SecurityController extends Controller
 {
 
     /**
-     * @Route("/admin/login", name="admin_login")
+     * @Route("/login", name="user_login")
      * @Template()
      */
     public function loginAction(Request $request, AuthenticationUtils $authUtils)
@@ -36,16 +36,14 @@ class SecurityController extends Controller
     }
 
 
-
     /**
-     * @Route("/admin/logout", name="admin_security_logout")
+     * @Route("/logout", name="security_logout")
      * @Template()
      */
     public function logoutAction()
     {
         return [];
     }
-
 
 
 }

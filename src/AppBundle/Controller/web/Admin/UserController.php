@@ -6,7 +6,7 @@
  * Time: 10:39
  */
 
-namespace AppBundle\Controller\Admin;
+namespace AppBundle\Controller\web\Admin;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -41,7 +41,7 @@ class UserController extends Controller
     /**
      *  add new user
      *
-     * @Route("/admin/users/add", name="admin_addUser")
+     * @Route("/admin/users/add", name="admin_users_add")
      * @Template()
      */
     public function addAction(Request $request)
@@ -83,7 +83,7 @@ return       ['form' => $form->createView()];
      *
      *  sl - for tralling slash if its needed
      *
-     * @Route("/admin/users/edit/{id}{sl}", name="admin_editUser", defaults={"sl" : ""}, requirements={"id" : "[1-9][0-9]*","sl":"/?"})
+     * @Route("/admin/users/edit/{id}{sl}", name="admin_user_edit", defaults={"sl" : ""}, requirements={"id" : "[1-9][0-9]*","sl":"/?"})
      * @Template()
      */
     public function editAction(Request $request){

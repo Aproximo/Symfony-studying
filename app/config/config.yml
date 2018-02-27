@@ -71,14 +71,14 @@ swiftmailer:
 
 #my own configs
 
-
-fos_rest:
-    param_fetcher_listener: true
-    body_listener: true
-    format_listener:
-        enabled: true
-        rules:
-#            - { path: '^/user/api', priorities: ['json'], fallback_format: 'html' }
-    versioning: true
-    view:
-        view_response_listener: 'force'
+#
+#fos_rest:
+#    param_fetcher_listener: true
+#    body_listener: true
+#    format_listener:
+#        enabled: true
+#        rules:
+##            - { path: '^/user/api', priorities: ['json'], fallback_format: 'html' }
+#    versioning: true
+#    view:
+#        view_response_listener: 'force'

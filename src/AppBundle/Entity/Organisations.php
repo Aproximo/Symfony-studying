@@ -12,27 +12,24 @@ use Doctrine\ORM\Mapping\JoinColumn;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use JMS\Serializer\Annotation as JMS;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="organisations")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\OrganisationsRepository")
+ * @JMS\ExclusionPolicy("none")
  */
 class Organisations
 {
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-
 
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      */
-    private $idd;
+    private $id;
+
 
     /**
      * @ORM\Column(type="string")
